@@ -25,7 +25,15 @@ SECRET_KEY = 'django-insecure-c=q88hs&jk__v#+jjd%6j8c#-b9ts0o3g!7kug58w)26ggq+w8
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+THIRD_PARTY_APPS = [
+
+]
+
+LOCAL_APPS = [
+
+]
 
 
 # Application definition
@@ -74,12 +82,14 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'hyperX_db',
+        'HOST': '127.0.0.1',
+        'USER': 'supreme',
+        'PASSWORD': 'supr3m1um'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
